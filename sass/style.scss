@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: white;
+}
+
+.slogan {
+    background-color: #333333;
+    color: white;
+    font-size: 50px;
+
+    .slogan__title {
+        padding: 20px;
+    }
+}
+
+.result {
+    margin-left: 20px;
+}
+
+.salary {
+    margin-left: 20px;
+
+    span, input {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .button {
+        background-color: #4185f2;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+
+    .salary__tax ul {
+        display: inline;
+
+        li {
+            list-style-type: none;
+            display: flex;
+
+            input {
+                margin-right: 10px;
+            }
+
+            span {
+                border: 1px solid grey;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: lightgrey;
+            }
+
+            p {
+                align-self: center;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.table-container {
+    padding: 20px;
+
+    .table {
+        border-collapse: collapse;
+        width: 100%;
+        padding: 0;
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+    }
+}
