@@ -23,7 +23,7 @@
             <div class="salary__form">
                 <h4>Oblicz swoje wynagrodzenie B2B</h4>
                 <span>Kwota</span>
-                <input>
+                <input type="number" id="netto">
             </div>
             <div class="salary__tax">
                 <ul>
@@ -36,7 +36,7 @@
                         <p>Brutto</p>
                     </li>
                 </ul>
-                <button class="button">Oblicz</button>
+                <button class="button" id="calculate-btn">Oblicz</button>
             </div>
         </div>
     </section>
@@ -52,19 +52,19 @@
                 </tr>
                 <tr>
                     <td>PIT</td>
-                    <td>111</td>
+                    <td id="pit">0</td>
                 </tr>
                 <tr>
                     <td>VAT</td>
-                    <td>1111</td>
+                    <td id="vat">0</td>
                 </tr>
                 <tr>
                     <td>ZUS</td>
-                    <td>111</td>
+                    <td id="zus">0</td>
                 </tr>
                 <tr>
                     <td>Zdrowotne</td>
-                    <td>111</td>
+                    <td id="zdrowotne">111</td>
                 </tr>
             </table>
         </div>
@@ -72,7 +72,7 @@
     <section class="container profit-container">
         <div class="profit">
             <p>Kwota pozostająca do dyspozycji:</p>
-            <input>
+            <span id="profit"></span>
         </div>
     </section>
     <script src="js/script.js"></script>

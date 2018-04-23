@@ -114,8 +114,12 @@ h4 {
         padding: 20px;
     }
 
-    input {
+    span {
+        background-color: white;
         color: black;
-        padding: 10px 20px;
+        display: inline-block;
+        padding: 20px;
+        vertical-align: middle;
+        width: 100px;
     }
 }
