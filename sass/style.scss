@@ -9,10 +9,10 @@ body {
 }
 
 .container {
-    width: 100%;
+    background-color: white;
     margin: 0 auto;
     max-width: 1000px;
-    background-color: white;
+    width: 100%;
 }
 
 .slogan {
@@ -39,8 +39,8 @@ body {
 
     .button {
         background-color: #4185f2;
-        color: white;
         border-radius: 5px;
+        color: white;
         padding: 10px 20px;
     }
 
@@ -48,19 +48,19 @@ body {
         display: inline;
 
         li {
-            list-style-type: none;
             display: flex;
+            list-style-type: none;
 
             input {
                 margin-right: 10px;
             }
 
             span {
-                border: 1px solid grey;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
                 background-color: lightgrey;
+                border: 1px solid grey;
+                border-radius: 50%;
+                height: 10px;
+                width: 10px;
             }
 
             p {
@@ -75,8 +75,8 @@ body {
 h4 {
     font-size: 20px;
     letter-spacing: 1px;
-    padding-top: 20px;
     margin: 0;
+    padding-top: 20px;
 }
 
 .table-container {
@@ -84,8 +84,8 @@ h4 {
 
     .table {
         border-collapse: collapse;
-        width: 100%;
         padding: 0;
+        width: 100%;
 
         td, th {
             border: 1px solid black;
@@ -99,5 +99,23 @@ h4 {
         td:last-child {
             text-align: right;
         }
+    }
+}
+
+.profit {
+    background-color: #333333;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+
+    p {
+        display: inline;
+        padding: 20px;
+    }
+
+    input {
+        color: black;
+        padding: 10px 20px;
     }
 }
