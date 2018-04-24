@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Do+Hyeon");
-@import url("sass/media.css");
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -22,7 +21,13 @@ body {
 .slogan {
   background-color: #004480;
   color: white;
-  font-size: 50px;
+  font-size: 20px;
+}
+
+@media (min-width: 1400px) {
+  .slogan {
+    font-size: 50px;
+  }
 }
 
 .slogan .slogan__title {
@@ -143,14 +148,28 @@ h4 {
 .profit {
   background-color: #004480;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
-  padding: 20px;
+  text-align: center;
+}
+
+@media (min-width: 1400px) {
+  .profit {
+    font-size: 20px;
+    padding: 20px 0;
+    text-align: left;
+  }
 }
 
 .profit p {
-  display: inline;
-  padding: 20px;
+  display: inline-block;
+}
+
+@media (min-width: 1400px) {
+  .profit p {
+    display: inline;
+    padding: 20px;
+  }
 }
 
 .profit span {
@@ -159,8 +178,15 @@ h4 {
   border-radius: 5px;
   color: black;
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
+  margin: 10px;
   text-align: center;
   vertical-align: middle;
   width: 200px;
+}
+
+@media (min-width: 1400px) {
+  .profit span {
+    margin: 0;
+  }
 }
