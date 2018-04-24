@@ -51,6 +51,7 @@ body {
   border-radius: 5px;
   border-image: none;
   padding: 3px;
+  text-align: right;
 }
 
 .salary input:focus {
