@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -42,7 +44,9 @@ body {
   background-color: #4185f2;
   border-radius: 5px;
   color: white;
+  font-weight: bold;
   padding: 10px 20px;
+  text-transform: uppercase;
 }
 
 .salary .statement {
@@ -127,7 +131,9 @@ h4 {
   background-color: white;
   color: black;
   display: inline-block;
+  font-size: 30px;
   padding: 20px;
+  text-align: center;
   vertical-align: middle;
-  width: 100px;
+  width: 200px;
 }
