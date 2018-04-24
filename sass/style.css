@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon");
+@import url("sass/media.css");
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-color: lightblue;
+  background-color: #6a6a6b;
   margin: 0 auto;
   padding: 0;
 }
@@ -18,7 +20,7 @@ body {
 }
 
 .slogan {
-  background-color: #333333;
+  background-color: #004480;
   color: white;
   font-size: 50px;
 }
@@ -40,13 +42,28 @@ body {
   margin: 10px 0;
 }
 
+.salary input {
+  border-radius: 5px;
+  border-image: none;
+  padding: 3px;
+}
+
+.salary input:focus {
+  outline: none;
+}
+
 .salary .button {
-  background-color: #4185f2;
+  background-color: #004480;
+  border: none;
   border-radius: 5px;
   color: white;
   font-weight: bold;
   padding: 10px 20px;
   text-transform: uppercase;
+}
+
+.salary .button:focus {
+  outline: none;
 }
 
 .salary .statement {
@@ -85,6 +102,7 @@ body {
 }
 
 h4 {
+  font-family: 'Do Hyeon', sans-serif;
   font-size: 20px;
   letter-spacing: 1px;
   margin: 0;
@@ -114,8 +132,16 @@ h4 {
   text-align: right;
 }
 
+.table-container .table tr:nth-of-type(odd) {
+  background-color: #e6f3ff;
+}
+
+.table-container .table tr:first-of-type {
+  background-color: #cce7ff;
+}
+
 .profit {
-  background-color: #333333;
+  background-color: #004480;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -129,9 +155,10 @@ h4 {
 
 .profit span {
   background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
   color: black;
   display: inline-block;
-  font-size: 30px;
   padding: 20px;
   text-align: center;
   vertical-align: middle;
