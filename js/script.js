@@ -1,17 +1,11 @@
-var pitElement = document.querySelector('#pit');
-var vatElement = document.querySelector("#vat");
-var zusElement = document.querySelector("#zus");
-var zdrowotneElement = document.querySelector("#zdrowotne");
+var incomeElement = document.querySelector('#pit');
+var goodstaxElement = document.querySelector("#vat");
+var socialInsuraneElement = document.querySelector("#zus");
+var healthInsuranceElement = document.querySelector("#zdrowotne");
 var nettoElement = document.querySelector("#netto");
 var profitElement = document.querySelector("#profit");
 var errorElement = document.querySelector("#warning");
-
 var calculateButton = document.querySelector("#calculate-btn");
-
-
-
-
-
 
 //calculate value in the table
 
@@ -23,38 +17,31 @@ calculateButton.addEventListener("click", function () {
     }
 
     else {
-        var incomeValue = 0.19;
-        var zusValue = 843.45;
-        var zdrowotneValue = 319.94;
-        var goodtax = 0.23;
-        var zdrowotneDoOdjęciaValue = (Math.round(zdrowotneValue * 7.75 / 9 * 100)) / 100;
-        var taxbase = Math.round(nettoValue - zusValue);
-        var vatValue = Math.round(nettoValue * goodtax);
-        var pitValue = Math.round((taxbase * incomeValue) - zdrowotneDoOdjęciaValue);
+        var incomeRate = 0.19;
+        var socialInsuraneValue = 843.45;
+        var healthInsuranceValue = 319.94;
+        var goodTaxRate = 0.23;
+        var partofHealthInsuranceValue = (Math.round(healthInsuranceValue * 7.75 / 9 * 100)) / 100;
+        var taxbase = Math.round(nettoValue - socialInsuraneValue);
+        var goodstaxValue = Math.round(nettoValue * goodTaxRate);
+        var incomeValue = Math.round((taxbase * incomeRate) - partofHealthInsuranceValue);
 
-        if (pitValue < 0) {
-            pitValue = 0;
+        if (incomeValue < 0) {
+            incomeValue = 0;
         }
 
-        var profitValue = (nettoValue - (pitValue + zusValue + zdrowotneValue));
+        var profitValue = (nettoValue - (incomeValue + socialInsuraneValue + healthInsuranceValue));
 
         if (profitValue < 0) {
             profitValue = 0;
         }
 
-        pitElement.innerText = pitValue.toFixed(2) + " zł";
-        vatElement.innerText = vatValue.toFixed(2) + " zł";
-        zusElement.innerText = zusValue + " zł";
-        zdrowotneElement.innerText = zdrowotneValue + " zł";
+        incomeElement.innerText = incomeValue.toFixed(2) + " zł";
+        goodstaxElement.innerText = goodstaxValue.toFixed(2) + " zł";
+        socialInsuraneElement.innerText = socialInsuraneValue + " zł";
+        healthInsuranceElement.innerText = healthInsuranceValue + " zł";
         profitElement.innerText = profitValue.toFixed(2) + " zł";
 
         errorElement.classList.add("hidden");
     }
 });
-
-
-
-
-
-
-
