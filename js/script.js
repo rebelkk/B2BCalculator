@@ -1,7 +1,7 @@
-var incomeElement = document.querySelector('#pit');
-var goodstaxElement = document.querySelector("#vat");
-var socialInsuraneElement = document.querySelector("#zus");
-var healthInsuranceElement = document.querySelector("#zdrowotne");
+var incomeTaxElement = document.querySelector('#incomeTax');
+var vatTaxElement = document.querySelector("#vatTax");
+var socialInsuraneElement = document.querySelector("#socialInsurane");
+var healthInsuranceElement = document.querySelector("#healthInsurance");
 var nettoElement = document.querySelector("#netto");
 var profitElement = document.querySelector("#profit");
 var errorElement = document.querySelector("#warning");
@@ -17,27 +17,27 @@ calculateButton.addEventListener("click", function () {
     }
 
     else {
-        var incomeRate = 0.19;
+        var incomeTaxRate = 0.19;
         var socialInsuraneValue = 843.45;
         var healthInsuranceValue = 319.94;
-        var goodTaxRate = 0.23;
+        var vatTaxRate = 0.23;
         var partofHealthInsuranceValue = (Math.round(healthInsuranceValue * 7.75 / 9 * 100)) / 100;
-        var taxbase = Math.round(nettoValue - socialInsuraneValue);
-        var goodstaxValue = Math.round(nettoValue * goodTaxRate);
-        var incomeValue = Math.round((taxbase * incomeRate) - partofHealthInsuranceValue);
+        var taxBase = Math.round(nettoValue - socialInsuraneValue);
+        var vatTaxValue = Math.round(nettoValue * vatTaxRate);
+        var incomeTaxValue = Math.round((taxBase * incomeTaxRate) - partofHealthInsuranceValue);
 
-        if (incomeValue < 0) {
-            incomeValue = 0;
+        if (incomeTaxValue < 0) {
+            incomeTaxValue = 0;
         }
 
-        var profitValue = (nettoValue - (incomeValue + socialInsuraneValue + healthInsuranceValue));
+        var profitValue = (nettoValue - (incomeTaxValue + socialInsuraneValue + healthInsuranceValue));
 
         if (profitValue < 0) {
             profitValue = 0;
         }
 
-        incomeElement.innerText = incomeValue.toFixed(2) + " zł";
-        goodstaxElement.innerText = goodstaxValue.toFixed(2) + " zł";
+        incomeTaxElement.innerText = incomeTaxValue.toFixed(2) + " zł";
+        vatTaxElement.innerText = vatTaxValue.toFixed(2) + " zł";
         socialInsuraneElement.innerText = socialInsuraneValue + " zł";
         healthInsuranceElement.innerText = healthInsuranceValue + " zł";
         profitElement.innerText = profitValue.toFixed(2) + " zł";
