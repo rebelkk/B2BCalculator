@@ -45,6 +45,14 @@ body {
   padding: 10px 20px;
 }
 
+.salary .statement {
+  color: red;
+}
+
+.salary .hidden {
+  display: none;
+}
+
 .salary .salary__tax ul {
   display: inline;
 }
